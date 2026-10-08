@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+}
+
+
+/* MENU */
+
+header {
+    background-color: #0d47a1;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 20px;
+}
+
+.logo {
+    color: white;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #90caf9;
+}
+
+
+/* TRANG CHỦ */
+
+.home {
+    max-width: 1100px;
+    margin: auto;
+
+    min-height: 600px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 60px 30px;
+}
+
+.home-text {
+    width: 55%;
+}
+
+.home-text p {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.home-text h1 {
+    font-size: 45px;
+    color: #0d47a1;
+    margin-bottom: 10px;
+}
+
+.home-text h2 {
+    margin-bottom: 20px;
+}
+
+.home-image {
+    width: 35%;
+    text-align: center;
+}
+
+.home-image img {
+    width: 280px;
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 8px solid white;
+
+    box-shadow: 0 5px 20px #999;
+}
+
+.button {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 12px 25px;
+
+    background-color: #0d47a1;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 25px;
+}
+
+.button:hover {
+    background-color: #1565c0;
+
+    transform: scale(1.05);
+}
+
+
+/* TIÊU ĐỀ */
+
+.title {
+    text-align: center;
+
+    font-size: 30px;
+
+    color: #0d47a1;
+
+    margin-bottom: 40px;
+}
+
+
+/* GIỚI THIỆU */
+
+#about {
+    background-color: white;
+
+    padding: 80px 30px;
+}
+
+.about-box {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: flex;
+
+    gap: 40px;
+}
+
+.about-info,
+.about-text {
+    flex: 1;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    background-color: #f4f7fb;
+
+    box-shadow: 0 3px 10px #ddd;
+}
+
+.about-info p {
+    margin-bottom: 15px;
+}
+
+
+/* KỸ NĂNG */
+
+#skills {
+    padding: 80px 30px;
+}
+
+.skills-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.skill {
+    background-color: white;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    box-shadow: 0 3px 10px #ddd;
+
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-8px);
+}
+
+.skill h3 {
+    color: #0d47a1;
+
+    margin-bottom: 15px;
+}
+
+
+/* DỰ ÁN */
+
+#projects {
+    background-color: white;
+
+    padding: 80px 30px;
+}
+
+.projects-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.project {
+    padding: 30px;
+
+    border-left: 5px solid #0d47a1;
+
+    background-color: #f4f7fb;
+
+    border-radius: 10px;
+}
+
+.project h3 {
+    color: #0d47a1;
+
+    margin-bottom: 15px;
+}
+
+
+/* LIÊN HỆ */
+
+#contact {
+    padding: 80px 30px;
+}
+
+.contact-box {
+    max-width: 600px;
+
+    margin: auto;
+
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 3px 10px #ddd;
+
+    text-align: center;
+}
+
+.contact-box p {
+    margin: 20px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #0d47a1;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+footer p {
+    margin: 8px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .menu {
+        gap: 10px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+
+        text-align: center;
+
+        gap: 40px;
+    }
+
+    .home-text {
+        width: 100%;
+    }
+
+    .home-image {
+        width: 100%;
+    }
+
+    .about-box {
+        flex-direction: column;
+    }
+
+    .skills-container,
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .home-text h1 {
+        font-size: 32px;
+    }
+}
